@@ -37,7 +37,7 @@ jobs:
       run: yarn build
 
     - name: installing surge
-      run: npm installl -g surge
+      run: npm install -g surge
     
     - name: deploying on surge
       run: surge ./build http://bootcamp-react-salman.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
