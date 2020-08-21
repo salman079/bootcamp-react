@@ -1,30 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ReactDOM from "react-dom";
+// import "./styles.css";
 
 function App() {
+  const[theme, setTheme] = React.useState("red");
+  const onClickHandler = () => setTheme( theme === "red"? "blue": "red");
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>Saloo bhai 2nd update</p>
-        <p>Saloo bhai 3rd update</p>
-        <p>Saloo bhai 4th update</p> <br />
-        <button onClick={()=>alert('hello')}>Addition counter</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Text theme1={theme}/>
+      <button onClick = {onClickHandler}>Change theme</button>
     </div>
   );
 }
-
+function Text({theme1}) {
+  return(
+    <h1 style = {{color: `${theme1}`}}>{theme1}</h1>
+  );
+  }
 export default App;
