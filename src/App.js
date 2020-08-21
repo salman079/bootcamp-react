@@ -13,7 +13,7 @@ function App() {
         <p>Saloo bhai 2nd update</p>
         <p>Saloo bhai 3rd update</p>
         <p>Saloo bhai 4th update</p> <br />
-        <button onClick={()=>alert('hello')>Addition counter</button>
+        <button onClick={()=>alert('hello')}>Addition counter</button>
         <a
           className="App-link"
           href="https://reactjs.org"
