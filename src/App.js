@@ -1,7 +1,6 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 // import "./styles.css";
 
 function App() {
@@ -22,3 +21,6 @@ function Text({theme1}) {
   );
   }
 export default App;
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
